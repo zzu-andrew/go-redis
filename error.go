@@ -15,7 +15,7 @@ import (
 // ErrClosed performs any operation on the closed client will return this error.
 var ErrClosed = pool.ErrClosed
 
-// HasErrorPrefix checks if the err is a Redis error and the message contains a prefix.
+// HasErrorPrefix checks if err is a Redis error and the message contains a prefix.
 func HasErrorPrefix(err error, prefix string) bool {
 	var rErr Error
 	if !errors.As(err, &rErr) {
